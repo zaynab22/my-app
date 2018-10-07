@@ -1,0 +1,32 @@
+<h2>Users </h2>
+ 
+<table class="table" ng-if="users.length>0">
+ <tr>
+ <th>User No.</th>
+ <th>Name</th>
+ <th>Job</th>
+ <th>Address</th>
+ <th>Contact No.</th>
+ <th>Actions</th>
+ </tr>
+ <tr ng-repeat="user in users">
+ <td><input type="text"  ng-model="(user._id).substring(23,24);" name="id" ng-required="true" class="form-control" readonly/></td>
+ <td><input type="text" ng-model="user.name" name="name" ng-required="true" class="form-control" readonly /></td>
+ <td><input type="text" ng-model="user.job" name="job" ng-required="true" class="form-control" readonly /></td>
+ <td><input name="address" ng-model="user.address" ng-required="true" class="form-control" readonly /></td>
+ <td><input type="text" ng-model="user.contactNo" name="contactNo" ng-required="true" class="form-control" readonly/></td>
+ <td>
+ <a  class="glyphicon glyphicon-edit" ui-sref="edit({id:user._id})">Edit</a> |
+ <a  class="glyphicon glyphicon-remove" href="#" ng-click="deleteUser(user._id)">Delete</a>
+ </td>
+ </tr>
+</table>
+<div ng-if="users.length==0">
+ No record found !!
+</div>
+
+
+
+
+
+
