@@ -26,6 +26,6 @@
     });
     })
     .constant("globalConfig", {
-    apiAddress: 'http://localhost:3000/api'
+    apiAddress: 'https://example1994.herokuapp.com/api'
     });
    })();
